@@ -13,7 +13,7 @@
         </div>
       </div>
     </li>
-    @foreach($users as $user)
+    @foreach($userss as $user)
     <li class="items-unique item-user-{{ $user->id }}">
       <div class="list-inner">
         <div class="pure-g">
@@ -29,7 +29,7 @@
       </div>
     </li>
     @endforeach
-    {{ $users->links() }}
+    {{ $userss->links() }}
   </ul>
 </div>
 @endsection

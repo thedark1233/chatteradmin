@@ -39,12 +39,12 @@ class ChatterServiceProvider extends ServiceProvider
          }
        };
        $users  = \App\User::paginate(20);
-       $view->with('users', $users);
+       $view->with('userss', $users);
 
        $categories = Models\ForumCategory::whereNull('parent_id')->with('children')->get();
        $categoriesUl = Models\ForumCategory::whereNull('parent_id')->with('children')->paginate(5);
 
-       $view->with('categories', $categories);
+       $view->with('categoriess', $categories);
        $view->with('categoriesul', $categoriesUl);
        $view->with('cat', new Models\ForumCategory());
        $view->with('common', new Common());

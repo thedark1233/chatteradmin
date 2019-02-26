@@ -19,7 +19,7 @@
             <option value=""> — — —  Choose One — — — </option>
             <?php
               $html = '';
-              $html .= $common::kidsOptions($categories);
+              $html .= $common::kidsOptions($categoriess);
               echo $html;
              ?>
            </select>

@@ -4,6 +4,7 @@ namespace Codiiv\Chatter;
 
 use Illuminate\Support\ServiceProvider;
 use Codiiv\Chatter\Models\Common;
+use Sentinel;
 
 class ChatterServiceProvider extends ServiceProvider
 {
@@ -27,9 +28,9 @@ class ChatterServiceProvider extends ServiceProvider
 
       view()->composer('*', function ($view){
        // $request =  Request();
-       if(\Auth::check()) {
+       if(Sentinel::check()) {
          $ismaster =  Models\Option::where('option_name','master_admin')
-         ->where('option_value', auth()->user()->id)
+         ->where('option_value', Sentinel::getUser()->id)
          ->first();
          if($ismaster){
            $view->with('ismaster', true);

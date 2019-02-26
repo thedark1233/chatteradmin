@@ -6,7 +6,7 @@
     <div class="left-inner">
       <form class="" action="/chatteradmin/categories" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <input type="hidden" name="payload_source" value="{{ base64_encode(base64_encode(auth()->user()->email)) }}">
+        <input type="hidden" name="payload_source" value="{{ base64_encode(base64_encode(Sentinel::getUser()->email)) }}">
         <div class="form-row">
           <h3>Add a new Category</h3>
         </div>

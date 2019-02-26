@@ -7,6 +7,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Codiiv\Chatter\Models\ForumCategory;
 
+use Sentinel;
+
 class ChatterController extends Controller
 {
   public function __construct()
@@ -35,7 +37,7 @@ class ChatterController extends Controller
     $sender = base64_decode(base64_decode($x));
     $category = new ForumCategory;
 
-    if(\Auth::check()):
+    if(Sentinel::check()):
       $category->name = $request->name;
       $category->parent_id = $request->parent;
       $category->color = '#'.$request->color;
@@ -68,7 +70,7 @@ class ChatterController extends Controller
   static public function deleteCategory(){
     $cat  = $_POST['cat'];
     $page = $_POST['page'];
-    if(\Auth::check()):
+    if(Sentinel::check()):
       $dis = ForumCategory::where('id', $cat)->first();
       $directParent = $dis->parent_id;
       // We update direct descendants if any

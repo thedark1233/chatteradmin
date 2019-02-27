@@ -19,7 +19,7 @@
                         <div class="pure-g">
                             <div class="cell hand--1-2 nexus--1-5"><p>{{ ucwords($reply->discussion->title) }}</p></div><!--
           --><div class="cell hand--1-2 nexus--1-5"><p>{{ $reply->discussion->title }}</p></div><!--
-          --><div class="cell hand--1-2 nexus--1-5"><p>{{ $reply->user->name }} - {{$discussion->user->email}} </p></div>
+          --><div class="cell hand--1-2 nexus--1-5"><p>{{ $reply->user->name }} - {{$reply->user->email}} </p></div>
             <div class="cell hand--1-2 nexus--1-5"><p>{!! $reply->body !!}</p></div><!--
             --><div class="cell hand--1-2 nexus--1-5"><p>{{ $reply->created_at }}</p></div>
                         </div>

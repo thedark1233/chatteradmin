@@ -49,6 +49,7 @@ class ChatterServiceProvider extends ServiceProvider
        $view->with('cat', new Models\ForumCategory());
        $view->with('common', new Common());
        $view->with('discs', Models\Discussion::paginate(20));
+       $view->with('replications', Models\Reply::paginate(20));
 
       });
     }

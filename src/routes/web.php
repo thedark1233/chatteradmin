@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'chatteradmin',  'middleware' => ['web','connected']], function()
+Route::group(['prefix' => 'chatteradmin',  'middleware' => ['web','connected','admin']], function()
 {
   Route::get('/', 'Codiiv\Chatter\Controllers\ChatterController@loadAdmin')->name("admin.forums");
   Route::get('/{page}', 'Codiiv\Chatter\Controllers\ChatterController@loadPage')->name("installadmin");

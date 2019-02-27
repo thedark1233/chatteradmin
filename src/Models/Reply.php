@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
 {
-    protected $table = 'chatter_posts';
+    protected $table = 'chatter_post';
 
      public function discussion(){
        return $this->belongsTo('Codiiv\Chatter\Models\Discussion', 'chatter_discussion_id');

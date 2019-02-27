@@ -28,7 +28,7 @@ class ChatterController extends Controller
       }
     else
       {
-        return 'Are you sure about that? ';
+        return redirect()->back();
       }
   }
 

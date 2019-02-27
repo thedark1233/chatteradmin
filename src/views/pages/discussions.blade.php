@@ -7,7 +7,7 @@
         <div class="pure-g">
             <div class="cell hand--1-2 nexus--1-5"><p>Discussion</p></div><!--
             --><div class="cell hand--1-2 nexus--1-5"><p>Name</p></div><!--
-            --><div class="cell hand--1-2 nexus--1-5"><p>Email</p></div><!--
+            --><div class="cell hand--1-2 nexus--1-5"><p>Utilisateur</p></div><!--
             --><div class="cell hand--1-2 nexus--1-5"><p>Since</p></div>
         </div>
       </div>
@@ -18,7 +18,7 @@
         <div class="pure-g">
             <div class="cell hand--1-2 nexus--1-5"><p>{{ $discussion->id }}</p></div><!--
           --><div class="cell hand--1-2 nexus--1-5"><p>{{ $discussion->title }}</p></div><!--
-          --><div class="cell hand--1-2 nexus--1-5"><p>{{ $discussion->user->name }}</p></div><!--
+          --><div class="cell hand--1-2 nexus--1-5"><p>{{ $discussion->user->name }} - {{$discussion->user->email}} </p></div><!--
             --><div class="cell hand--1-2 nexus--1-5"><p>{{ $discussion->created_at }}</p></div>
         </div>
         <div class="update-item-actions hidden">
